@@ -27,7 +27,6 @@ Imports:
     LaplacesDemon,
     BiocParallel,
     mousetrap,
-    shiny,
     dplyr,
     mixR,
     car
