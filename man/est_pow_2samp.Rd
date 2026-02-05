@@ -7,9 +7,9 @@
 est_pow_2samp(n1, n2, alpha, nsim, modes, dist, params, tests, nperm)
 }
 \arguments{
-\item{n1}{number of \link{somethings} in group 1}
+\item{n1}{number of somethings in group 1}
 
-\item{n2}{number of \link{somethings} in group 2}
+\item{n2}{number of somethings in group 2}
 
 \item{alpha}{default significance level (0.05)}
 
