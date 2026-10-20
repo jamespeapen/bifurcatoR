@@ -24,7 +24,6 @@ Imports:
     LaplacesDemon,
     MASS,
     mclust,
-    methods,
     mixdist,
     mixR,
     mousetrap,
@@ -33,7 +32,6 @@ Imports:
     olsrr,
     ppclust,
     pwr,
-    shiny,
     sigclust,
     stats,
     twosamples
