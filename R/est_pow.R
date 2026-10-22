@@ -11,7 +11,6 @@
 #' @return          a power estimate
 #'
 #' @import          diptest
-#' @import          LaplacesDemon
 #' @importFrom      stats rbeta rlnorm rnorm rweibull
 #'
 #' @export

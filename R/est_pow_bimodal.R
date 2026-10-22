@@ -12,7 +12,6 @@
 #' @import          mclust
 #' @import          diptest
 #' @import          mousetrap
-#' @import          LaplacesDemon
 #' @import          multimode
 #' @import          twosamples
 #' @import          mixR
