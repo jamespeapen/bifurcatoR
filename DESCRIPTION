@@ -17,14 +17,10 @@ Depends:
     R (>= 4.0.0)
 Imports:
     car,
-    data.table,
-    diptest,
     dplyr,
     Hmisc,
-    LaplacesDemon,
     MASS,
     mclust,
-    methods,
     mixdist,
     mixR,
     mousetrap,
@@ -33,7 +29,6 @@ Imports:
     olsrr,
     ppclust,
     pwr,
-    shiny,
     sigclust,
     stats,
     twosamples
