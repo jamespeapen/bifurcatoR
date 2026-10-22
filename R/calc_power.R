@@ -9,7 +9,7 @@
 #' @param   alpha default significance level (0.05)
 #' @param   nsim  number of simulations (100)
 #'
-#' @import  dplyr
+#' @importFrom dplyr case_when
 #' @importFrom stats ks.test
 #'
 #' @export

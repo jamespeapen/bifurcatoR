@@ -33,7 +33,6 @@ import(LaplacesDemon)
 import(car)
 import(data.table)
 import(diptest)
-import(dplyr)
 import(mclust)
 import(mixR)
 import(mixdist)
@@ -43,6 +42,7 @@ import(mvtnorm)
 import(sigclust)
 import(twosamples)
 importFrom(MASS,fitdistr)
+importFrom(dplyr,case_when)
 importFrom(stats,
   anova,
   confint,
