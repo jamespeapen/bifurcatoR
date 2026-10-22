@@ -13,7 +13,6 @@
 #' @return          a power estimate
 #'
 #' @import          car
-#' @import          data.table
 #' @importFrom      stats anova ks.test lm rbeta rlnorm rnorm rweibull
 #'
 #' @export

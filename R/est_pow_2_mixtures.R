@@ -13,7 +13,6 @@
 #'
 #' @import          twosamples
 #' @import          car
-#' @import          data.table
 #'
 #' @export
 
