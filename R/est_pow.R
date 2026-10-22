@@ -12,7 +12,6 @@
 #'
 #' @import          diptest
 #' @import          LaplacesDemon
-#' @import          Hmisc
 #' @importFrom      stats rbeta rlnorm rnorm rweibull
 #'
 #' @export

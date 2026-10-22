@@ -37,7 +37,6 @@
 #'
 #' @import          diptest
 #' @import          LaplacesDemon
-#' @import          Hmisc
 #' @importFrom      stats confint lm quantile
 #'
 #' @export

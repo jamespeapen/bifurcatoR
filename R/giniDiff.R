@@ -5,10 +5,7 @@
 #'
 #' @return      Absolute value of the difference between group 1 and group 2 Gini's mean difference
 #'
-#' @import       Hmisc
-#'
 #' @export
-
 giniDiff <- function(y, X) {
   abs((Hmisc::GiniMd(y[X == 1]) - Hmisc::GiniMd(y[X == 0])))
 }
