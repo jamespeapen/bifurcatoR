@@ -10,7 +10,6 @@
 #' @return          a power estimate
 #'
 #' @import          mclust
-#' @import          diptest
 #' @import          mousetrap
 #' @import          multimode
 #' @import          twosamples

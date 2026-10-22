@@ -10,7 +10,6 @@
 #'
 #' @return          a power estimate
 #'
-#' @import          diptest
 #' @importFrom      stats rbeta rlnorm rnorm rweibull
 #'
 #' @export
