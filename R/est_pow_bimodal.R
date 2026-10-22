@@ -9,7 +9,6 @@
 #'
 #' @return          a power estimate
 #'
-#' @import          mclust
 #' @import          mousetrap
 #' @import          multimode
 #' @import          twosamples
@@ -44,10 +43,10 @@ est_pow_bimodal <- function(
 
   if ("mclust_E" %in% tests) {
     test_fns$mclust_E <- function(x) {
-      mclustBootstrapLRT(x, modelName = "E", verbose = FALSE, maxG = 1)$p.value < alpha
+      mclust::mclustBootstrapLRT(x, modelName = "E", verbose = FALSE, maxG = 1)$p.value < alpha
     }
   }
-  ctrl <- emControl(
+  ctrl <- mclust::emControl(
     eps = 1e-7, # stop near-singular variance solutions sooner
     tol = c(1e-3, 1e-3), # higher tolerance to prevent from divergent variances (i.e modes made of a single outlier)
     itmax = c(5000, 5000)
