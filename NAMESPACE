@@ -29,7 +29,6 @@ export(pow_cs)
 export(rmixnorm)
 export(sdDiff)
 import(sigclust)
-import(twosamples)
 importFrom(MASS,fitdistr)
 importFrom(dplyr,case_when)
 importFrom(stats,

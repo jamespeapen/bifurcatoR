@@ -9,7 +9,6 @@
 #'
 #' @return          a power estimate
 #'
-#' @import          twosamples
 #' @importFrom stats rweibull rgamma rlnorm rbeta
 #'
 #' @export
