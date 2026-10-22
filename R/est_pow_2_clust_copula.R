@@ -9,7 +9,6 @@
 #'
 #' @return          a power estimate
 #'
-#' @import mvtnorm
 #' @import sigclust
 #' @importFrom stats qbeta qweibull qgamma qlnorm
 #'
@@ -32,7 +31,7 @@ est_pow_2_clust_copula <- function(
   #https://rpubs.com/FJRubio/GC2
   get_copula <- function(qmarg1, qmarg2, n_cop, rho) {
     R <- rbind(c(1, rho), c(rho, 1))
-    dat <- rmvnorm(n_cop, mean = c(0, 0), sigma = R)
+    dat <- mvtnorm::rmvnorm(n_cop, mean = c(0, 0), sigma = R)
     dat[, 1] <- qmarg1(pnorm(dat[, 1]))
     dat[, 2] <- qmarg2(pnorm(dat[, 2]))
     return(dat)
