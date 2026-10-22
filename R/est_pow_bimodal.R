@@ -9,7 +9,6 @@
 #'
 #' @return          a power estimate
 #'
-#' @import          multimode
 #' @import          twosamples
 #' @importFrom stats rweibull rgamma rlnorm rbeta
 #'
@@ -65,7 +64,7 @@ est_pow_bimodal <- function(
   # modetest family: avoid repeating boilerplate
   add_modetest <- function(key, method) {
     if (key %in% tests) {
-      test_fns[[key]] <<- function(x) modetest(x, mod0 = 1, method = method)$p.value < alpha
+      test_fns[[key]] <<- function(x) multimode::modetest(x, mod0 = 1, method = method)$p.value < alpha
     }
   }
 
