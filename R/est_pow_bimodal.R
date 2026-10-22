@@ -9,7 +9,6 @@
 #'
 #' @return          a power estimate
 #'
-#' @import          mousetrap
 #' @import          multimode
 #' @import          twosamples
 #' @import          mixR
@@ -59,7 +58,7 @@ est_pow_bimodal <- function(
 
   if ("mt" %in% tests) {
     test_fns$mt <- function(x) {
-      mt_check_bimodality(data.frame(x = x), method = "BC")$BC > (5 / 9)
+      mousetrap::mt_check_bimodality(data.frame(x = x), method = "BC")$BC > (5 / 9)
     }
   }
 
