@@ -11,6 +11,7 @@
 #' @return          a power estimate
 #'
 #' @import          twosamples
+#' @importFrom      stats bartlett.test fligner.test var.test anova lm t.test rnorm rlnorm rweibull rgamma rbeta
 #'
 #' @export
 

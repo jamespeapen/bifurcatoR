@@ -11,6 +11,7 @@
 #'
 #' @import          multimode
 #' @import          twosamples
+#' @importFrom stats rweibull rgamma rlnorm rbeta
 #'
 #' @export
 

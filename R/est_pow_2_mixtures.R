@@ -12,6 +12,7 @@
 #' @return          a power estimate
 #'
 #' @import          twosamples
+#' @importFrom      stats ks.test bartlett.test fligner.test var.test t.test anova
 #'
 #' @export
 

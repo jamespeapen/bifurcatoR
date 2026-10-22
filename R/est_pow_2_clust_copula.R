@@ -11,6 +11,7 @@
 #'
 #' @import mvtnorm
 #' @import sigclust
+#' @importFrom stats qbeta qweibull qgamma qlnorm
 #'
 #' @export
 
