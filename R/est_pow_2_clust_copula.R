@@ -9,7 +9,6 @@
 #'
 #' @return          a power estimate
 #'
-#' @import sigclust
 #' @importFrom stats qbeta qweibull qgamma qlnorm
 #'
 #' @export
@@ -106,7 +105,7 @@ est_pow_2_clust_copula <- function(
 
   if ("sigclust" %in% tests) {
     test_fns$sigclust <- function(x) {
-      sigclust(x, nsim = 500, icovest = 2)@pval < alpha
+      sigclust::sigclust(x, nsim = 500, icovest = 2)@pval < alpha
     }
   }
 
