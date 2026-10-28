@@ -11,7 +11,7 @@
 #'
 #' @return          a data frame with columns `N`, `Test`, `power` and `FP`
 #'
-#' @importFrom stats rweibull rgamma rlnorm rbeta
+#' @importFrom stats rweibull rgamma rlnorm rbeta setNames
 #'
 #' @export
 

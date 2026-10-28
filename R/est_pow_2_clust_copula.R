@@ -7,7 +7,7 @@
 #' @param   params  parameters for the generating distribution
 #' @param   tests   names of tests to run
 #'
-#' @importFrom stats qbeta qweibull qgamma qlnorm
+#' @importFrom stats pnorm qbeta qweibull qgamma qlnorm setNames
 #'
 #' @return          a power estimate
 #'

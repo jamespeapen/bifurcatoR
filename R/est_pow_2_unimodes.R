@@ -10,6 +10,8 @@
 #'
 #' @return          a power estimate
 #'
+#' @importFrom stats setNames
+#'
 #' @export
 
 est_pow_2_unimodes <- function(n, 
