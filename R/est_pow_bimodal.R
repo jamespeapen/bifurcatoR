@@ -16,7 +16,6 @@
 #' @import          mousetrap
 #' @import          LaplacesDemon
 #' @import          multimode
-#' @import          Hmisc
 #' @import          twosamples
 #' @import          mixR
 #'
