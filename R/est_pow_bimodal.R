@@ -12,7 +12,6 @@
 #' @return          a data frame with columns `N`, `Test`, `power` and `FP`
 #'
 #' @import          mclust
-#' @import          diptest
 #' @import          mousetrap
 #' @import          multimode
 #' @import          twosamples

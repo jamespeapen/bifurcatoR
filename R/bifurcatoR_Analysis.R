@@ -49,7 +49,6 @@
 #'
 #' @return          a data frame where each row corresponds to the results of test, p-values, test stats, and confidence intervals where possible
 #'
-#' @import          diptest
 #' @importFrom      stats confint lm quantile
 #'
 #' @export
