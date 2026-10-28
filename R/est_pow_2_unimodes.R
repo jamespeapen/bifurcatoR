@@ -10,8 +10,6 @@
 #'
 #' @return          a power estimate
 #'
-#' @import          twosamples
-#'
 #' @export
 
 est_pow_2_unimodes <- function(n, 

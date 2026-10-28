@@ -15,8 +15,6 @@
 #'
 #' @return          a power estimate
 #'
-#' @import          twosamples
-#'
 #' @export
 
 
@@ -52,11 +50,11 @@ est_pow_2_mixtures <- function(n_group1,n_group2, alpha = 0.05, nsim = 20, dist 
   test_fns <- list()
   
   if ("ks" %in% tests) test_fns$ks <- function(x) ks.test(x[[1]], x[[2]])$p.value < alpha
-  if ("cvm" %in% tests) test_fns$cvm <- function(x) cvm_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
-  if ("dts" %in% tests) test_fns$dts <- function(x) dts_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
-  if ("ad"  %in% tests) test_fns$ad  <- function(x) ad_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
-  if ("wass" %in% tests) test_fns$wass <- function(x) wass_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
-  if ("kuiper" %in% tests) test_fns$kuiper <- function(x) kuiper_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
+  if ("cvm" %in% tests) test_fns$cvm <- function(x) twosamples::cvm_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
+  if ("dts" %in% tests) test_fns$dts <- function(x) twosamples::dts_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
+  if ("ad"  %in% tests) test_fns$ad  <- function(x) twosamples::ad_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
+  if ("wass" %in% tests) test_fns$wass <- function(x) twosamples::wass_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
+  if ("kuiper" %in% tests) test_fns$kuiper <- function(x) twosamples::kuiper_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
   
   if ("levene" %in% tests) {
     test_fns$levene <- function(x) car::leveneTest(c(x[[1]], x[[2]]), group)$"Pr(>F)"[1] < alpha

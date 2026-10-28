@@ -11,8 +11,6 @@
 #'
 #' @return          a data frame with columns `N`, `Test`, `power` and `FP`
 #'
-#' @import          twosamples
-#'
 #' @export
 
 est_pow_bimodal = function(n,alpha = 0.05,nsim = 20,dist =c("norm", "beta", "weibull", "gamma", "lnorm") ,params,tests,run_null=T,convert=T){
