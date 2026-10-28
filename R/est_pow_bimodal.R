@@ -11,7 +11,6 @@
 #'
 #' @return          a data frame with columns `N`, `Test`, `power` and `FP`
 #'
-#' @import          multimode
 #' @import          twosamples
 #'
 #' @export
@@ -56,7 +55,7 @@ est_pow_bimodal = function(n,alpha = 0.05,nsim = 20,dist =c("norm", "beta", "wei
   # modetest family: avoid repeating boilerplate
   add_modetest <- function(key, method) {
     if (key %in% tests) {
-      test_fns[[key]] <<- function(x) modetest(x, mod0 = 1, method = method)$p.value < alpha
+      test_fns[[key]] <<- function(x) multimode::modetest(x, mod0 = 1, method = method)$p.value < alpha
     }
   }
   
