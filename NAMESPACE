@@ -16,7 +16,6 @@ export(permutation_tests)
 export(pool_params)
 export(rmixnorm)
 export(sdDiff)
-import(sigclust)
 importFrom(MASS,fitdistr)
 importFrom(dplyr,case_when)
 importFrom(stats,

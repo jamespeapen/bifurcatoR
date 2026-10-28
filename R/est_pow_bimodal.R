@@ -11,6 +11,8 @@
 #'
 #' @return          a data frame with columns `N`, `Test`, `power` and `FP`
 #'
+#' @importFrom stats rweibull rgamma rlnorm rbeta
+#'
 #' @export
 
 est_pow_bimodal = function(n,alpha = 0.05,nsim = 20,dist =c("norm", "beta", "weibull", "gamma", "lnorm") ,params,tests,run_null=T,convert=T){

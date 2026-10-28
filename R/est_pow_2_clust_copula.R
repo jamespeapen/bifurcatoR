@@ -7,9 +7,9 @@
 #' @param   params  parameters for the generating distribution
 #' @param   tests   names of tests to run
 #'
-#' @return          a power estimate
+#' @importFrom stats qbeta qweibull qgamma qlnorm
 #'
-#' @import sigclust
+#' @return          a power estimate
 #'
 #' @export
 
@@ -98,7 +98,7 @@ est_pow_2_clust_copula = function(n,alpha = 0.05,nsim = 20 ,dist = c("norm", "be
   add_mclusttest("mclust_VVV", "VVV")
   
   if("sigclust" %in% tests){
-    test_fns$sigclust <- function(x){sigclust(x, nsim = 500,icovest = 2)@pval < alpha}
+    test_fns$sigclust <- function(x){sigclust::sigclust(x, nsim = 500,icovest = 2)@pval < alpha}
   }
   
   test_names <- names(test_fns)

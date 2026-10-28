@@ -13,6 +13,8 @@
 #' column simulates the null of two samples from the same bimodal population: modes are pooled
 #' across the groups and so is the mixing proportion; each group keeps its total size.
 #'
+#' @importFrom stats ks.test bartlett.test fligner.test var.test t.test anova
+#'
 #' @return          a power estimate
 #'
 #' @export
