@@ -13,7 +13,6 @@
 #'
 #' @import          multimode
 #' @import          twosamples
-#' @import          mixR
 #'
 #' @export
 
@@ -71,7 +70,7 @@ est_pow_bimodal = function(n,alpha = 0.05,nsim = 20,dist =c("norm", "beta", "wei
   add_mixR <- function(key, family) {
     if (key %in% tests) {
       test_fns[[key]] <<- function(x) {
-        try.fit <- try(bs.test(x,family = family)$pvalue,silent=T)
+        try.fit <- try(mixR::bs.test(x,family = family)$pvalue,silent=T)
         if(! inherits(try.fit,"try-error")) { 
           try.fit < alpha
         } else {
