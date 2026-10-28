@@ -16,7 +16,6 @@
 #' @return          a power estimate
 #'
 #' @import          twosamples
-#' @import          car
 #'
 #' @export
 
@@ -60,7 +59,7 @@ est_pow_2_mixtures <- function(n_group1,n_group2, alpha = 0.05, nsim = 20, dist 
   if ("kuiper" %in% tests) test_fns$kuiper <- function(x) kuiper_test(x[[1]], x[[2]], nboots = 500)[2] < alpha
   
   if ("levene" %in% tests) {
-    test_fns$levene <- function(x) leveneTest(c(x[[1]], x[[2]]), group)$"Pr(>F)"[1] < alpha
+    test_fns$levene <- function(x) car::leveneTest(c(x[[1]], x[[2]]), group)$"Pr(>F)"[1] < alpha
   }
   
   if ("bartlett" %in% tests) {

@@ -11,7 +11,6 @@
 #' @return          a power estimate
 #'
 #' @import          twosamples
-#' @import          car
 #'
 #' @export
 
@@ -46,7 +45,7 @@ est_pow_2_unimodes <- function(n,
   test_fns <- list()
   
   if ("levene" %in% tests) {
-    test_fns$levene <- function(x) leveneTest(c(x[[1]], x[[2]]), group)$"Pr(>F)"[1] < alpha
+    test_fns$levene <- function(x) car::leveneTest(c(x[[1]], x[[2]]), group)$"Pr(>F)"[1] < alpha
   }
   
   if ("bartlett" %in% tests) {
