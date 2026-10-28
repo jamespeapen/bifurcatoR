@@ -11,7 +11,6 @@
 #'
 #' @return          a data frame with columns `N`, `Test`, `power` and `FP`
 #'
-#' @import          mousetrap
 #' @import          multimode
 #' @import          twosamples
 #' @import          mixR
@@ -51,7 +50,7 @@ est_pow_bimodal = function(n,alpha = 0.05,nsim = 20,dist =c("norm", "beta", "wei
   
   if ("mt" %in% tests) {
     test_fns$mt <- function(x) {
-      mt_check_bimodality(data.frame(x = x),method="BC")$BC > (5/9)
+      mousetrap::mt_check_bimodality(data.frame(x = x),method="BC")$BC > (5/9)
     }
   }
   
