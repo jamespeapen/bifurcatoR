@@ -10,7 +10,6 @@
 #' @return          a power estimate
 #'
 #' @import mvtnorm
-#' @import mclust
 #' @import sigclust
 #'
 #' @export

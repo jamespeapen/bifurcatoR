@@ -11,7 +11,6 @@
 #'
 #' @return          a data frame with columns `N`, `Test`, `power` and `FP`
 #'
-#' @import          mclust
 #' @import          mousetrap
 #' @import          multimode
 #' @import          twosamples
@@ -34,18 +33,18 @@ est_pow_bimodal = function(n,alpha = 0.05,nsim = 20,dist =c("norm", "beta", "wei
   
   if ("mclust_E" %in% tests) {
     test_fns$mclust_E <- function(x) {
-      mclustBootstrapLRT(x, modelName="E",
+      mclust::mclustBootstrapLRT(x, modelName="E",
                                  verbose=FALSE, maxG=1)$p.value < alpha
     }
   }
-  ctrl <- emControl(
+  ctrl <- mclust::emControl(
     eps   = 1e-7,          # stop near-singular variance solutions sooner
     tol   = c(1e-3, 1e-3), # higher tolerance to prevent from divergent variances (i.e modes made of a single outlier)
     itmax = c(5000, 5000)
   )
   if ("mclust_V" %in% tests) {
     test_fns$mclust_V <- function(x) {
-      mclustBootstrapLRT(x, modelName="V",
+      mclust::mclustBootstrapLRT(x, modelName="V",
                          verbose=FALSE, maxG=1, control = ctrl)$p.value < alpha
     }
   }
